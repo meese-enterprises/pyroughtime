@@ -27,7 +27,7 @@ setup(
   packages=["pyroughtime"],
   include_package_data=True,
   # Can't build ed25519 on Python 3.12 yet
-  python_requires=">=3.7.*,<=3.11.*",
+  python_requires=">=3.7,<3.12",
   install_requires=["ed25519", "pycrypto"],
   license=about["__license__"],
   classifiers=[
