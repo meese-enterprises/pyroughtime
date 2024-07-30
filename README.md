@@ -13,20 +13,20 @@ An experimental Roughtime client and server implementation in Python 3 using the
 ## Example
 
 ### From Python
-
-```python
+```py
 from pyroughtime import RoughtimeClient, RoughtimeServer
+
 serv, publ = RoughtimeServer.test_server()
 cl = RoughtimeClient()
-local_reply = cl.query('127.0.0.1', 2002, publ, newver=True)
-google_reply = cl.query('roughtime.sandbox.google.com', 2002, 'etPaaIxcBMY1oUeGpwvPMCJMwlRVNxv51KK/tktoJTQ=', newver=False)
+local_reply = cl.query("127.0.0.1", 2002, publ, newver=True)
+google_reply = cl.query("roughtime.sandbox.google.com", 2002, "etPaaIxcBMY1oUeGpwvPMCJMwlRVNxv51KK/tktoJTQ=", newver=False)
 serv.stop()
-print(local_reply['prettytime'])
-print(google_reply['prettytime'])
+print(local_reply["prettytime"])
+print(google_reply["prettytime"])
 ```
 
-### From console
-```console
+### From CLI
+```sh
 $ ./pyroughtime.py -l ecosystem.json
 Caesium:                  2020-12-23 16:26:16.765275 UTC (+/- 1.000  s) (RTT:  100.5 ms)
 Chainpoint-Roughtime:     2020-12-23 16:26:16.973777 UTC (+/- 1.000  s) (RTT:  288.9 ms)
@@ -50,5 +50,4 @@ Merkle tree path length: 0
 
 ## License
 
-This project is licensed under the GNU General Public License - see the [LICENSE](LICENSE)
-file for details.
+This project is licensed under the GNU General Public License - see the [LICENSE](./LICENSE) file for details.

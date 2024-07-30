@@ -1,0 +1,7 @@
+__title__ = "pyroughtime"
+__description__ = "pyroughtime - A Python 3 Roughtime implementation"
+__version__ = "1.0.0"
+__author__ = "Aaron Meese"
+__author_email__ = "aaron@meese.enterprises"
+__license__ = "GPL v3"
+__url__ = "https://github.com/meese-enterprises/pyroughtime"
