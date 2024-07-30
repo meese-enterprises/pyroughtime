@@ -10,6 +10,20 @@ An experimental Roughtime client and server implementation in Python 3 using the
 * [ed25519](https://github.com/warner/python-ed25519/)
 * [PyCryptodome](https://github.com/Legrandin/pycryptodome)
 
+### Installing on Linux
+If you run into an error like "This environment is externally managed", you can create a venv and install the dependencies with:
+
+```sh
+$ sudo add-apt-repository ppa:deadsnakes/ppa
+$ sudo apt-get update
+$ sudo apt-get install -y python3.11 python3.11-dev python3.11-venv
+$ python3.11 -m venv "venv"
+$ source venv/bin/activate
+$ pip install -r requirements.txt
+```
+
+Currently we have to use Python 3.11 or earlier due to `ed25519` not being compatible with Python 3.12.
+
 ## Example
 
 ### From Python
