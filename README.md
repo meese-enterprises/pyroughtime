@@ -64,11 +64,15 @@ Merkle tree path length: 0
 
 ## Releasing
 
+REF: <https://packaging.python.org/en/latest/tutorials/packaging-projects/>
+
 ```sh
-$ python3.11 setup.py build
-$ python3.11 setup.py install
-$ python -m pip install build twine
-$ twine upload dist/*
+$ python3.11 -m pip install --upgrade build cffi twine
+$ python3.11 -m build
+# Test
+$ python3.11 -m twine upload --repository testpypi dist/*
+# Release
+$ python3.11 -m twine upload dist/*
 ```
 
 ## License
