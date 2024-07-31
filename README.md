@@ -20,10 +20,6 @@ $ sudo apt-get install -y python3.11 python3.11-dev python3.11-venv
 $ python3.11 -m venv "venv"
 $ source venv/bin/activate
 $ pip install -r requirements.txt
-
-# Building and installing
-$ python3.11 setup.py build
-$ python3.11 setup.py install
 ```
 
 Currently we have to use Python 3.11 or earlier due to `ed25519` not being compatible with Python 3.12.
@@ -64,6 +60,15 @@ Leap events:
 Delegate key validity start: 2020-12-22 00:00:00.000000
 Delegate key validity end:   2022-01-01 00:00:00.000000
 Merkle tree path length: 0
+```
+
+## Releasing
+
+```sh
+$ python3.11 setup.py build
+$ python3.11 setup.py install
+$ python -m pip install build twine
+$ twine upload dist/*
 ```
 
 ## License
